@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>@*@Styles.Render("~/Content/bootstrap")
+    @Scripts.Render("~/bundles/bootstrap")*@
+    @Styles.Render("~/Content/Admin/css")
+    @Scripts.Render("~/bundles/common")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/Admin")
+</head>
+<body>
+    <div class="container">
+        <div id="headeradmin">
+        </div>
+        <div id="col_right">
+            @Html.Partial("~/Views/Shared/Admin/_RightPartial.cshtml")
+        </div>
+        <div id="content_middle">
+            <section>
+                @RenderBody()
+            </section>
+        </div>
+    </div>
+    <div id="footer">
+        <p class="ftext">
+            Copy Right Matrix IT Group</p>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

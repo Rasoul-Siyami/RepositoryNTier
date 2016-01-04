@@ -1,0 +1,17 @@
+﻿@model Matrix.Company.DomainClasses.News
+@{
+    ViewBag.Title = "Readmore";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="newsbox">
+    <div class="title">
+        <h3>
+            @Html.DisplayFor(modelItem => modelItem.NewsTitle)</h3>
+    </div>
+    <h4>
+        @Html.DisplayFor(modelItem => modelItem.Author)</h4>
+    <p>@Html.DisplayFor(modelItem => modelItem.CreatedOnPersian)</p>
+    <div class="ptext">
+        @Html.DisplayFor(modelItem => modelItem.Description)<br />
+    </div>
+</div>

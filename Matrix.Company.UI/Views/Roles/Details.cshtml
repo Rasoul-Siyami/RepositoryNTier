@@ -1,0 +1,26 @@
+﻿@model Matrix.Company.DomainClasses.Role
+@{
+    ViewBag.Title = "مدیریت نقش ها | جزئیات نقش";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+<h2>
+    مدیریت نقش ها | جزئیات نقش</h2>
+<fieldset>
+    <legend>Role</legend>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.RoleName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RoleName)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.RoleDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RoleDescription)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("ویرایش", "Edit", new { id = Model.RoleId }) |
+    @Html.ActionLink("برگشت به لیست نقش ها", "Index")
+</p>

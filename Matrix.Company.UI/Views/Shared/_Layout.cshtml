@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title شرکت مهندسی ماتریس</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="bar">
+        <div id="bar_panel">
+            <section id="login">
+                @Html.Partial("_LoginPartial")
+            </section>
+            <section id="datetime">
+                <p>@ViewBag.Date</p>
+            </section>
+        </div>
+    </div>
+    <div id="page">
+        <header id="masterhead"></header>
+        <div style="clear: both">
+        </div>
+        <nav>
+            <div id="top_nav">
+                <ul class="menu">
+                    <li>@Html.ActionLink("خانه", "Index", "Home")</li>
+                    <li>@Html.ActionLink("درباره ما", "Index", "About")</li>
+                    <li>@Html.ActionLink("ارتباط با ما", "Create", "Contact")</li>
+                    <li>@Html.ActionLink("آپلود فایل", "FileUpload", "Home")</li>
+                    <li>@Html.ActionLink("نقشه", "map", "Home")</li>
+                    <li>@Html.ActionLink("اخبار", "Index", "News")</li>
+                    <li>@Html.ActionLink(linkText: "مدیریت", actionName: "Index", controllerName: "Manage")</li>
+                </ul>
+            </div>
+        </nav>
+        <div style="clear: both">
+        </div>
+        <div id="container">
+            <div id="right_col">
+                <div class="box_right">
+                    <h3>
+                        دسته بندی
+                    </h3>
+                    شبکه کامپیوتر
+                </div>
+                <br />
+                <div class="box_right">
+                    <h3>
+                        پیوندها
+                    </h3>
+                    @{
+                        Html.RenderAction("Index", "WebLink");
+                    }
+                </div>
+                <br />
+                <div class="box_right">
+                    <h3>
+                        نظرسنجی
+                    </h3>
+                </div>
+            </div>
+            <div id="page_content">
+                @*  @Html.Action("SliderGallery", "Home")*@
+                <div style="clear: both">
+                </div>
+                <section>
+                    @RenderBody()
+                </section>
+                <div id="bottom_content">
+                    <div class="box">
+                        <h3>
+                            نظرسنجی
+                        </h3>
+                    </div>
+                    <div class="box">
+                        <h3>
+                            بازدیدکنندگان
+                        </h3>
+                    </div>
+                    <div class="box">
+                        <h3>
+                            آخرین مطالب
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            @*<div id="left_col">
+                </div>
+            *@
+        </div>
+        <div style="clear: both">
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer_panel">
+            <div class="box_footer">
+                <h4>
+                    نقشه
+                </h4>
+            </div>
+            <div class="box_footer">
+                <h4>
+                    وضیعت آب و هوا
+                </h4>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

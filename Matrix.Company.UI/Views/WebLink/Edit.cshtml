@@ -1,0 +1,54 @@
+﻿@model Matrix.Company.DomainClasses.Weblink
+@{
+    ViewBag.Title = "مدیریت وب لینک ها | ویرایش";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+<h2>
+    مدیریت وب لینک ها | ویرایش</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Weblink</legend>
+        @Html.HiddenFor(model => model.Id)
+        <div class="editor-label">
+            @Html.LabelFor(model => model.WebLinkTitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.WebLinkTitle)
+            @Html.ValidationMessageFor(model => model.WebLinkTitle)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.URL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.URL)
+            @Html.ValidationMessageFor(model => model.URL)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Status)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Status)
+            @Html.ValidationMessageFor(model => model.Status)
+        </div>
+        <p>
+            <input type="submit" value="ذخیره" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("برگشت به لیست وب لینک ها", "IndexAdmin")
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

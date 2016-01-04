@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Upload";
+}
+<h2>
+    آپلود فایل</h2>
+@using (Html.BeginForm("FileUpload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+    <div class="editor-field">
+        <input type="file" id="fileToUpload" name="file" />
+        <span class="field-validation-error" id="spanfile"></span>
+    </div>
+    <p>
+        <input type="submit" id="btnSubmit" value="آپلود فایل" /></p>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/common")
+}

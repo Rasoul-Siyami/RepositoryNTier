@@ -1,0 +1,167 @@
+﻿@using Matrix.Company.UI
+@using Matrix.Company.UI.Helpers
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+@Styles.Render("~/Content/Admin/css")
+<div class="metrobox">
+    <ul class="metro">
+        <li><a href="@Url.Action("IndexAdmin", "News")">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/news-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    مدیریت اخبار
+                </h5>
+            </div>
+        </a></li>
+        <li><a href="@Url.Action("IndexAdmin", "Article")">
+            <div class="">
+                <div class="container1">
+                    <img src="~/Content/Admin/images/icon/list-48.png" alt="" title="" />
+                    <br />
+                    <h5>
+                        مدیریت مقاله
+                    </h5>
+                </div>
+            </div>
+        </a></li>
+        <li><a href="@Url.Action("IndexAdmin", "WebLink")">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/link-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    مدیریت لینک ها
+                </h5>
+            </div>
+        </a></li>
+        <li><a href="">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/menu-64.png" alt="" title="" />
+                <br />
+                <h5 style="font-size: 13px;">
+                    مدیریت منو
+                </h5>
+            </div>
+        </a></li>
+    </ul>
+    <ul class="metro">
+        <li><a href="">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/grid-64.png" alt="" title="" />
+                <br />
+                <h5 style="font-size: 13px;">
+                    مدیریت اسلایدر
+                </h5>
+            </div>
+        </a></li>
+        <li><a href="">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/hot_articcle-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    گروه بندی مطالب
+                </h5>
+            </div>
+        </a></li>
+        <li><a href="">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/rss-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    خبرخوان ها
+                </h5>
+            </div>
+        </a></li>
+        <li><a href="">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/article-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    مدیریت
+                </h5>
+            </div>
+        </a></li>
+    </ul>
+    <div style="clear: both;">
+    </div>
+    <ul class="metro">
+        <li><a href="">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/tabligat-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    تبلیغات
+                </h5>
+            </div>
+        </a></li>
+        <li><a href="">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/nazar-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    نظرسنجی
+                </h5>
+            </div>
+        </a></li>
+        <li><a href="@Url.Action("IndexAdmin", "Contact")">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/contact-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    ارتباط با ما
+                </h5>
+            </div>
+        </a></li>
+        <li><a href="@Url.Action("Edit", "About")">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/about-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    درباره ما
+                </h5>
+            </div>
+        </a></li>
+    </ul>
+    <div style="clear: both;">
+    </div>
+    <ul class="metro">
+        <li><a href="">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/users-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    مدیریت کاربران
+                </h5>
+            </div>
+        </a></li>
+        <li><a href="">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/file-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    مدیریت فایل
+                </h5>
+            </div>
+        </a></li>
+        <li><a href="">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/message-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    ارسال ایمیل
+                </h5>
+            </div>
+        </a></li>
+        <li><a href="">
+            <div class="container1">
+                <img src="~/Content/Admin/images/icon/sms-64.png" alt="" title="" />
+                <br />
+                <h5>
+                    ارسال SMS
+                </h5>
+            </div>
+        </a></li>
+    </ul>
+</div>

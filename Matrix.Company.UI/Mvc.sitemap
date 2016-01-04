@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="خانه" controller="Home" action="Index">
+
+    <mvcSiteMapNode title="پیوندها" controller="WebLink" action="Index"/>
+
+    <mvcSiteMapNode title="تماس با ما" controller="Contact" action="Create"/>
+
+    <mvcSiteMapNode title="محصولات" controller="Products" action="Index"/>
+    <mvcSiteMapNode title="آپلو فایل" controller="Uploadfile" action="Upload"/>
+
+  </mvcSiteMapNode>
+</mvcSiteMap>

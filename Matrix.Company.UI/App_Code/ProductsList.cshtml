@@ -1,0 +1,11 @@
+﻿@using Matrix.Company.DomainClasses
+@helper GetProductList(List<Product> products)
+    {
+    <ul>
+        @foreach (var item in products)
+        {
+            <li>@item.Name $(@item.Price)</li>
+
+        }
+    </ul>
+}

@@ -1,0 +1,26 @@
+﻿@model Matrix.Company.DomainClasses.About
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+<h2>
+    بخش مدیریت | جزئیات درباره ما</h2>
+<fieldset>
+    <legend>درباره ما</legend>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("ویرایش", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("برگشت به لیست", "IndexAdmin")
+</p>

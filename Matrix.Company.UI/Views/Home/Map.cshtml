@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "map";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    نقشه سایت</h2>
+<div>
+    @Html.MvcSiteMap().Menu(false, true, true)
+    <br />
+    @Html.MvcSiteMap().SiteMapPath()
+</div>

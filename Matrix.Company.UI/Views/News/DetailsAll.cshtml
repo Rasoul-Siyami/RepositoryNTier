@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Matrix.Company.DomainClasses.News>
+@{
+    ViewBag.Title = "DetailsAll";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+<h2>
+    بخش مدیریت | جزئیات خبر</h2>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NewsTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        @*
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOnPersian)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.ModifiedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartPublishing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinishPublishing)
+        </th>
+        <th></th>*@
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewsTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            @* <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            @*
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedOnPersian)
+            </td>
+            @* <td>
+            @Html.DisplayFor(modelItem => item.ModifiedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartPublishing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinishPublishing)
+        </td>*@
+        </tr>
+    }
+</table>

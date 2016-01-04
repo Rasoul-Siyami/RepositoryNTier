@@ -1,0 +1,21 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Content/css")
+@Styles.Render("~/Content/themes/base/css")
+<link href="@Url.Content("~/Content/SlideCss/nivo-slider.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/SliderJs/jquery-1.8.3.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/SliderJs/jquery.nivo.slider.pack.js")" type="text/javascript"></script>
+<div class="slider-wrapper theme-default">
+    <div id="slider" class="nivoSlider">
+        <a href="http://rooeen.com/" title="این یک عنوان است">
+            <img src="../../Content/Upload/Slidegallery/nemo.jpg" alt="" /></a> <a href="http://rooeen.com/"
+                title="این کارتون داستان اسباب بازی هاس است">
+                <img src="../../Content/Upload/Slidegallery/toystory.jpg" alt="" /></a>
+        <a href="http://rooeen.com/" title="این کارتون آپ است.">
+            <img src="../../Content/Upload/Slidegallery/up.jpg" alt="" /></a> <a href="http://rooeen.com/"
+                title="این کارتون وال ای است">
+                <img src="../../Content/Upload/Slidegallery/walle.jpg" alt="" /></a>
+    </div>
+</div>

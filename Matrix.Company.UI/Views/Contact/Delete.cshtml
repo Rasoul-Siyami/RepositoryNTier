@@ -1,0 +1,41 @@
+﻿@model Matrix.Company.DomainClasses.Contact
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+<h2>
+    بخش مدیریت | حذف درباره ما</h2>
+@*<fieldset>
+    <legend>Contact</legend>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.WebSite)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WebSite)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Comment)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comment)
+    </div>
+</fieldset>*@
+@using (Html.BeginForm(actionName: "Delete", controllerName: "Roles", routeValues: new { id = Model.Id }))
+{
+    <p>
+        <input type="submit" value="حذف" onclick="return confirm ('آیا می خواهید رکورد موردنظر را حذف کنید؟');" />
+        @Html.ActionLink("برگشت به لیست وب لینک ها", "Index")
+    </p>
+}

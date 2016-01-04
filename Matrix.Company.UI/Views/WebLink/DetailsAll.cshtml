@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Matrix.Company.DomainClasses.Weblink>
+@{
+    ViewBag.Title = "DetailsAll";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+<h2>
+    مشاهده چکیده</h2>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WebLinkTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.URL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WebLinkTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.URL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+        </tr>
+
+    }
+</table>

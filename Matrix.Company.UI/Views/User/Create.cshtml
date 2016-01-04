@@ -1,0 +1,62 @@
+﻿@model Matrix.Company.ViewModel.Account.RegisterViewModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    ایجاد حساب کاربری</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <fieldset>
+        <legend>فرم ثبت نام</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ConfirmPassword)
+                @Html.PasswordFor(m => m.ConfirmPassword)
+                @Html.ValidationMessageFor(m => m.ConfirmPassword)
+            </li>
+        </ol>
+        <div class="editor-label">
+            @Html.Label("تصویر امنیتی")
+        </div>
+        <div id="bordercaptcha">
+            <img src="@Url.Action("CaptchaImage")" class="captcha-image" alt=""/></div>
+        <div style="clear: both">
+        </div>
+        <a href="#" class="refresh-captcha">تازه سازی</a>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CaptchaInputText)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.CaptchaInputText, new { autocomplete = "off" })
+            @Html.ValidationMessageFor(model => model.CaptchaInputText)
+        </div>
+        <div class="success-message">
+            @TempData["message"]
+        </div>
+        <input type="submit" value="ثبت نام" />
+    </fieldset>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/common")
+    <script type="text/javascript">
+        $('a.refresh-captcha').on('click', function (e) {
+            e.preventDefault();
+            $('.captcha-image').attr('src', '@Url.Action("CaptchaImage", "User")' + "?t=" + new Date().getTime());
+
+        });
+    </script>
+}

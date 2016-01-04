@@ -1,0 +1,41 @@
+<#@ template hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude" #>
+<#@ output extension=".cs" #>
+
+<#
+
+    var efHost = (EfTextTemplateHost)Host;
+    var code = new CodeGenerationTools(this);
+#>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Matrix.Company.DomainClasses;
+using Matrix.Company.DataLayer;
+using Matrix.Company.ServiceLayer.Base;
+using Matrix.Company.ServiceLayer.Contracts;
+
+
+namespace Matrix.Company.ServiceLayer.Service//<#= code.EscapeNamespace(efHost.Namespace) #>
+{
+    public  class <#= efHost.EntityType.Name #>Service: ServiceBase<<#= efHost.EntityType.Name #>>, I<#= efHost.EntityType.Name #>Service 
+    {
+<#
+    var collectionNavigations = efHost.EntityType.NavigationProperties.Where(
+        np => np.DeclaringType == efHost.EntityType
+            && np.ToEndMember.RelationshipMultiplicity == RelationshipMultiplicity.Many);
+
+    // Add a ctor to initialize any collections
+  
+#>
+        public <#= code.Escape(efHost.EntityType) #>Service(IUnitOfWork uow)
+            : base(uow)
+        {
+
+			
+
+        }
+
+	}
+}

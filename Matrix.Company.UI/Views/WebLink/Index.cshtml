@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Matrix.Company.ViewModel.WebLinkViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "";
+}
+@*<tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WebLinkTitle)
+        </th>
+    </tr>*@
+@foreach (var item in Model)
+{
+@*@Html.ActionLink(@item.WebLinkTitle,*@
+    <a href="@item.URL" target="_blank" >@item.WebLinkTitle</a>
+    <br />
+}

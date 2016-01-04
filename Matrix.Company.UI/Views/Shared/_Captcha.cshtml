@@ -1,0 +1,26 @@
+﻿@model Matrix.Company.Models.CaptchaModel
+<div class="editor-label">
+    @Html.Label("تصویر امنیتی")
+</div>
+<div id="border">
+    <img src="@Url.Action("CaptchaImage")" class="captcha-image" alt=""/></div>
+<a href="#" class="refresh-captcha">تازه سازی</a>
+<div class="editor-label">
+    @Html.LabelFor(model => model.CaptchaInputText)
+</div>
+<div class="editor-field">
+    @Html.TextBoxFor(model => model.CaptchaInputText, new { autocomplete = "off" })
+    @Html.ValidationMessageFor(model => model.CaptchaInputText)
+</div>
+<div class="success-message">
+    @TempData["message"]
+</div>
+@section Scripts{
+    <script type="text/javascript">
+        $('a.refresh-captcha').on('click', function (e) {
+            e.preventDefault();
+            $('.captcha-image').attr('src', '@Url.Action("CaptchaImage", "Account")' + "?t=" + new Date().getTime());
+
+        });
+    </script>
+}

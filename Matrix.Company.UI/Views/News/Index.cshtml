@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Matrix.Company.DomainClasses.News>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@foreach (var item in Model)
+{
+    <div class="newsbox">
+        <div class="title">
+            <h2>
+                @Html.DisplayFor(modelItem => item.NewsTitle)</h2>
+        </div>
+        <h5>
+            @Html.DisplayFor(modelItem => item.Author)</h5>
+        <p>@Html.DisplayFor(modelItem => item.CreatedOnPersian)</p>
+        <div class="ptext">
+            @Html.DisplayFor(modelItem => item.Description)<br />
+            <div class="readmore">
+                @*<a href="@Url.Action("Readmore", "News", new { id = item.Id })">ادامه مطلب...</a>*@
+                @Html.ActionLink("ادامه مطلب ...", "Readmore", new { id = item.Id })
+            </div>
+        </div>
+    </div>
+}

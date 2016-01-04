@@ -1,0 +1,74 @@
+﻿@model Matrix.Company.DomainClasses.News
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+<h2>
+    بخش مدیریت | جزئیات خبر</h2>
+<fieldset>
+    <legend>اخبار</legend>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.NewsTitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NewsTitle)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Author)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Author)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.CreatedBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreatedBy)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.CreatedOnPersian)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreatedOnPersian)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.ModifiedOn)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModifiedOn)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.ModifiedBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModifiedBy)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.StartPublishing)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartPublishing)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.FinishPublishing)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FinishPublishing)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("ویرایش", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("برگشت به لیست اخبار", "IndexAdmin")
+</p>

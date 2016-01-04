@@ -1,0 +1,117 @@
+﻿/*body, h1, h2, h3, h4, h5, h6, ul, li, div, img, p
+{
+    margin: 0px auto;
+    padding: 0px;
+}
+body
+{
+    font-size: 14px;
+    font-family: Tahoma;
+    color: White;
+}*/
+.metrobox
+{
+    float: right;
+    width: 930px;
+    height: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px #888888;
+}
+.metro ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.metro li
+{
+    list-style: none;
+    float: right;
+    position: relative;
+    padding-top: 5px;
+    padding-right: 12px;
+}
+.metro li a
+{
+    float: right;
+    position: relative;
+    width: 160px;
+    height: 120px;
+    margin: 5px;
+    color: Black;
+    background-color: White;
+    border: 2px solid #b1b3b4;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 30px;
+    box-shadow: 5px 5px 50px 20px #b1b3b4 inset;
+    border-radius: 5px;
+}
+.metro li a:hover
+{
+    outline: medium none;
+    box-shadow: 0px 0px 15px #CCC, 0px 0px 1px 1px #FFF;
+}
+.container1
+{
+    float: right;
+    width: 160px;
+    height: 120px;
+}
+.metro li a .container1 h5
+{
+    font-family: Tahoma;
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 50px;
+    text-align: center; /*text-shadow: 1px 1px Black;*/
+}
+.metro li a .container1 img
+{
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-right: 55px;
+}
+/*****************************menu toolbar*************************/
+.toolbarbox
+{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.toolbar
+{
+    height: 30px;
+    float: right;
+}
+.toolbar li
+{
+    float: right;
+    position: relative;
+    padding-right: 5px;
+    list-style: none;
+}
+.toolbar li a
+{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: B Nazanin;
+    font-weight: bold;
+    color: White;
+    text-transform: uppercase;
+    padding: 0 5px;
+    background-color: #082231;
+    border-radius: 4px;
+}
+.toolbar li a:hover
+{
+    color: red;
+}

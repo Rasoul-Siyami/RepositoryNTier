@@ -1,0 +1,60 @@
+﻿<div id='cssmenu'>
+    <ul>
+        <li class='last active'>@Html.ActionLink("خانه", "Index", "Manage")</li>
+        <li class='has-sub'><a href='#'><span>مدیریت کاربران</span></a>
+            <ul>
+                <li>@Html.ActionLink("ایجاد نقش", "Create", "Roles")</li>
+                <li>@Html.ActionLink("لیست نقش ها", "Index", "Roles")</li>
+                <li>@Html.ActionLink("ایجاد حساب کاربری", "Create", "User")</li>
+            </ul>
+        </li>
+        <li class='has-sub'><a href='#'><span>مدیریت اخبار</span></a>
+            <ul>
+                <li>@Html.ActionLink("ثبت خبر جدید", "Create", "News")</li>
+                <li>@Html.ActionLink("لیست خبرها", "IndexAdmin", "News")</li>
+                <li>@Html.ActionLink("مشاهده سرتیتر خبرها", "DetailsAll", "News")</li>
+            </ul>
+        </li>
+        <li class='has-sub'><a href='#'><span>مدیریت مقاله</span></a>
+            <ul>
+                <li><a href='#'><span>ثبت مقاله جدید</span></a></li>
+                <li><a href='#'><span>لیست مقاله ها</span></a></li>
+                <li><a href='#'><span>مشاهده چکیده مقاله ها</span></a></li>
+            </ul>
+        </li>
+        <li class='has-sub'><a href='#'><span>مدیریت وب لینکها</span></a>
+            <ul>
+                <li>@Html.ActionLink("ایجاد وب لینک", "Create", "WebLink")</li>
+                <li>@Html.ActionLink("لیست وب لینک ها", "IndexAdmin", "WebLink")</li>
+                <li>@Html.ActionLink("مشاهده چکیده لینک ها", "DetailsAll", "WebLink")</li>
+            </ul>
+        </li>
+        <li class='has-sub'><a href='#'><span>تبلیغات</span></a>
+            <ul>
+                <li><a href='#'><span>ثبت آگهی جدید</span></a></li>
+                <li><a href='#'><span>لیست آگهی ها</span></a></li>
+                <li><a href='#'><span>مشاهده چکیده آگهی ها</span></a></li>
+            </ul>
+        </li>
+        <li class='has-sub'><a href='#'><span>نظر سنجی</span></a>
+            <ul>
+                <li><a href='#'><span>ثبت سوال نظرسنجی</span></a></li>
+                <li><a href='#'><span>لیست نظرسنجی ها</span></a></li>
+                <li><a href='#'><span>مشاهده رای گیری</span></a></li>
+            </ul>
+        </li>
+        <li class='has-sub'><a href='#'><span>مدیریت افزونه ها</span></a>
+            <ul>
+                <li>@Html.ActionLink("ارتباط با ما", "Index", "Contact")</li>
+                <li>@Html.ActionLink("درباره ما", "IndexAdmin", "About")</li>
+                <li><a href='#'><span>نقشه سایت</span></a></li>
+                <li><a href='#'><span>آپلود فایل</span></a></li>
+                <li><a href='#'><span>آمار بازدیدکنندگان</span></a></li>
+            </ul>
+        </li>
+        <li class='last'><a href='#'><span>خبر خوان ها</span></a></li>
+        <li class='last'><a href='#'><span>نمایش وضیعت آب و هوا</span></a></li>
+        <li class='last'><a href='#'><span>گزارش گیری</span></a></li>
+        <li class='last'>@Html.ActionLink("ورود به سایت", "Index", "Home")</li>
+    </ul>
+</div>
