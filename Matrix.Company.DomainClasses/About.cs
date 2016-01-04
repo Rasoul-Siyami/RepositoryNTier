@@ -16,8 +16,10 @@ namespace Matrix.Company.DomainClasses
         [DataType(DataType.MultilineText)]
         [Display(Name = "توضیحات")]
         public string Description { get; set; }
+        public string Description2 { get; set; }
 
         [Display(Name = "وضیعت انتشار")]
         public bool Status { get; set; }
+
     }
 }
